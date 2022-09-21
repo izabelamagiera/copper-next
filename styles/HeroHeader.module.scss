@@ -1,0 +1,77 @@
+@import "variables";
+@import "mixins";
+
+.HeroHeaderBlock {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	justify-items: end;
+	width: 100%;
+	min-height: 595px;
+	background: $gradient-light;
+	background-image: url("/circle-pattern.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 280px 34%;
+
+	@include medium() {
+		min-height: auto;
+
+		min-height: auto;
+		background-size: auto 230%;
+		background-position: calc(50% + 170px) 50%;
+		// background-size: auto 225%;
+		// background-position: calc(50% + 200px) 50%;
+	}
+	@include small() {
+		min-height: auto;
+		background-size: auto 210%;
+		background-position: calc(50% + 160px) calc(50% - 10px);
+	}
+
+	&__Content {
+		max-width: 1200px;
+		padding: 250px 130px 105px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		@include medium() {
+			padding: 180px 30px 80px;
+		}
+
+		h1 {
+			font-family: $regola-bold;
+			color: $grey-dark;
+			font-weight: 600;
+			font-size: 50px;
+			line-height: 69px;
+			text-align: center;
+			letter-spacing: -0.61px;
+			margin: 0;
+			margin-bottom: 60px;
+
+			@include medium() {
+				font-size: 32px;
+				line-height: 40px;
+				margin-bottom: 40px;
+			}
+		}
+
+		p {
+			font-family: $regola-book;
+			color: $grey-dark;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 26px;
+			line-height: 36px;
+			text-align: center;
+			margin: 0;
+
+			@include medium() {
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+	}
+}

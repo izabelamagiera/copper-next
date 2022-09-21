@@ -1,0 +1,26 @@
+@mixin medium() {
+	@media (max-width: 960px) {
+		@content;
+	}
+}
+
+@mixin small() {
+	@media (max-width: 576px) {
+		@content;
+	}
+}
+
+.LargeScreen {
+	display: inherit;
+	@include medium() {
+		display: none;
+	}
+}
+
+.MediumScreen {
+	display: none;
+
+	@include medium() {
+		display: block;
+	}
+}

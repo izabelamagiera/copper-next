@@ -1,0 +1,26 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Regola Book", sans-serif;
+	background-color: $grey-light;
+	color: $grey;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: $grey;
+	text-decoration: none;
+}
+
+.layout,
+.container {
+	position: relative;
+	display: block;
+	width: 100%;
+}

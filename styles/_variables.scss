@@ -1,0 +1,31 @@
+// import fonts
+@font-face {
+	font-family: "Regola Book";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local("Regola Book"), url("/fonts/RegolaPro-Book.woff2") format("woff2");
+}
+@font-face {
+	font-family: "Regola Bold";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: local("Regola Bold"), url("/fonts/RegolaPro-Bold.woff2") format("woff2");
+}
+
+// fonts
+$regola-book: "Regola Book", sans-serif;
+$regola-bold: "Regola Bold", sans-serif;
+
+// colors
+$grey: #86939e;
+$grey-dark: #222426;
+$grey-med: #30353b;
+$grey-light: #f4f4f4;
+$white: #ffffff;
+$teal: #6aead4;
+$copper: #e5b1a5;
+
+//gradient
+$gradient-light: linear-gradient(90deg, #ffffff -47.92%, #e3e8e8 98.61%);

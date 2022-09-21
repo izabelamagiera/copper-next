@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+
+.Main {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	background-color: $grey-med;
+	padding: 95px 20px;
+
+	@include medium() {
+		padding: 55px 20px;
+	}
+}
+
+.NotFound {
+	min-height: 100vh;
+	width: 100vw;
+	background-color: $grey-med;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	color: $grey-light;
+	position: absolute;
+	z-index: 999;
+
+	span {
+		font-size: 20vw;
+		font-family: $regola-bold;
+		color: $grey-med;
+		text-shadow: (-3px 2px 6px rgba(106, 234, 212, 0.2));
+	}
+
+	h2 {
+		font-size: 3vw;
+		margin: 0;
+		letter-spacing: 2px;
+		opacity: 0.2;
+		text-transform: uppercase;
+	}
+
+	a {
+		font-size: 22px;
+		margin: 0;
+		opacity: 0.2;
+		color: $grey-light;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $teal;
+		}
+	}
+}

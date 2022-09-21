@@ -1,20 +1,25 @@
 {
-  "name": "copper-test",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.23.1",
-    "eslint-config-next": "12.3.0"
-  }
+	"name": "copper-test",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"graphql-request": "^5.0.0",
+		"next": "12.3.0",
+		"next-images": "^1.8.4",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"sass": "^1.54.9"
+	},
+	"devDependencies": {
+		"@svgr/cli": "^6.3.1",
+		"@svgr/webpack": "^6.3.1",
+		"eslint": "8.23.1",
+		"eslint-config-next": "12.3.0"
+	}
 }

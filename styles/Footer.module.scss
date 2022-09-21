@@ -1,0 +1,242 @@
+@import "variables";
+@import "mixins";
+
+.FooterBlock {
+	background-color: $grey-med;
+	padding: 50px 20px;
+
+	&__Container {
+		max-width: 1140px;
+		margin: 0 auto;
+		display: block;
+
+		.FooterRow {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: stretch;
+			width: 100%;
+
+			@include medium() {
+				flex-direction: column;
+			}
+
+			&__ColumnOne {
+				display: flex;
+				flex-direction: column;
+				width: 350px;
+				height: 100%;
+
+				@include medium() {
+					width: 100%;
+				}
+			}
+
+			&__ColumnTwo {
+				width: calc(100% - 403px);
+				@include medium() {
+					width: 100%;
+				}
+			}
+
+			.BorderTop {
+				border-top: 1px solid rgba(256, 256, 256, 0.1);
+			}
+
+			@include medium() {
+				&.Reverse {
+					flex-direction: column-reverse;
+				}
+			}
+
+			.FooterCopperLogo {
+				display: flex;
+				justify-content: flex-start;
+				width: 262px;
+				height: 66px;
+				position: relative;
+				margin-bottom: 53px;
+
+				@include medium() {
+					width: 185px;
+					height: 46px;
+					margin-bottom: 45px;
+				}
+			}
+
+			&div {
+				justify-items: start;
+			}
+
+			&__Contact {
+				display: flex;
+				justify-content: space-between;
+				font-size: 24px;
+				color: $white;
+				line-height: 34px;
+				padding-bottom: 53px;
+
+				@include medium() {
+					padding-top: 45px;
+					font-size: 18px;
+					line-height: 34px;
+					padding-bottom: 45px;
+				}
+
+				a {
+					display: block;
+					font-size: 24px;
+					color: $white;
+					transition: color 0.3s;
+
+					&:hover {
+						color: $teal;
+					}
+				}
+
+				&__Social {
+					position: relative;
+					display: flex;
+
+					a {
+						position: relative;
+						width: 30px;
+						height: 25px;
+						margin-left: 14px;
+
+						&:hover {
+							img {
+								fill: aquamarine;
+							}
+						}
+
+						@include medium() {
+							width: 20px;
+							height: 30px;
+						}
+					}
+				}
+			}
+
+			&__Links {
+				display: flex;
+				flex-direction: column;
+				padding: 0;
+				margin-top: 53px;
+				margin-bottom: 53px;
+
+				@include medium() {
+					margin-top: 45px;
+					margin-bottom: 45px;
+				}
+
+				&__Top {
+					display: flex;
+					justify-content: space-between;
+					align-items: top;
+					margin-bottom: 23px;
+				}
+
+				&__Bottom {
+					display: flex;
+					justify-content: flex-start;
+					align-items: top;
+
+					.IsoLogo {
+						display: flex;
+						flex-direction: column;
+						margin-right: 46px;
+						width: 163px;
+
+						.IsoText {
+							font-size: 8px;
+							text-align: center;
+						}
+					}
+				}
+
+				&__Menu {
+					display: grid;
+					grid-template-columns: repeat(auto-fill, 180px);
+					grid-column-gap: 38px;
+					grid-row-gap: 22px;
+
+					.Header {
+						color: $copper;
+						font-family: $regola-bold;
+						font-size: 16px;
+						line-height: 18px;
+						letter-spacing: 1.82857px;
+						text-transform: uppercase;
+						margin: 0;
+						margin-bottom: 23px;
+
+						@include medium() {
+							margin-top: 23px;
+						}
+					}
+
+					ul {
+						list-style-type: none;
+						padding: 0;
+						margin: 0;
+						li {
+							font-family: $regola-book;
+							font-style: normal;
+							font-weight: 400;
+							font-size: 13px;
+							line-height: 24px;
+							color: $grey-light;
+							opacity: 0.7;
+
+							a {
+								color: $grey-light;
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+
+			&__LegalInfo {
+				display: flex;
+				flex-direction: column;
+				margin-top: 23px;
+
+				@include medium() {
+					flex-direction: column;
+				}
+
+				p {
+					margin: 0;
+					font-family: $regola-book;
+					color: $grey-light;
+					font-size: 12px;
+					text-align: left;
+					line-height: 18px;
+				}
+
+				a {
+					margin-right: 23px;
+					margin-bottom: 23px;
+					font-size: 13px;
+					line-height: 12px;
+					color: $grey-light;
+					opacity: 0.7;
+				}
+
+				.SmallPrint {
+					font-family: $regola-book;
+					color: $grey-light;
+					font-size: 12px;
+					text-align: left;
+					line-height: 18px;
+					margin: 0;
+					margin-bottom: 23px;
+					margin-top: 23px;
+				}
+			}
+		}
+	}
+}
