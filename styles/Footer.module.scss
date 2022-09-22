@@ -58,10 +58,20 @@
 				position: relative;
 				margin-bottom: 53px;
 
+				svg {
+					width: inherit;
+					height: inherit;
+				}
+
 				@include medium() {
 					width: 185px;
 					height: 46px;
 					margin-bottom: 45px;
+
+					svg {
+						width: inherit;
+						height: inherit;
+					}
 				}
 			}
 

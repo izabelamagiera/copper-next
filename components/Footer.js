@@ -12,7 +12,7 @@ export default function Footer() {
 					<div className={styles.FooterRow}>
 						<div className={styles.FooterRow__ColumnOne}>
 							<div className={styles.FooterCopperLogo}>
-								<Logo />
+								<Logo style={{ width: "inherit", height: "inherit" }} />
 							</div>
 						</div>
 
