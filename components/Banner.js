@@ -11,7 +11,7 @@ export default function Banner({ cta }) {
 			</p>
 
 			<div className={styles.Banner__Btn}>
-				<Link href={`/${cta.btnLink}`}>
+				<Link href={`${cta.btnLink}`}>
 					<a>
 						<span>{cta.btnText}</span>
 					</a>

@@ -1,49 +1,19 @@
-import { request } from "../lib/api";
+import { getHomepage } from "../lib/api";
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import HeroHeader from "../components/HeroHeader";
 import styles from "../styles/Main.module.scss";
 
-const HOMEPAGE_QUERY = `
-query Homepage {
-	page: pageCollection(where: {setAsHomepage: "homepage"}, limit: 10) {
-		items {
-			slug
-			pageHero {
-			  header
-			  description
-			}
-			cta {
-				textBold
-				textNormal
-				btnText
-				btnLink
-			}
-			cardCollection {
-			  items {
-				icon {
-				  url
-				}
-				header
-				description
-			  }
-			}
-		  }
-      }
-    }
-   `;
+export const getStaticProps = async () => {
+	const data = await getHomepage();
 
-export async function getStaticProps() {
-	const data = await request({
-		query: HOMEPAGE_QUERY,
-	});
 	return {
 		props: {
-			content: data.page.items[0],
+			content: data.pageCollection.items[0],
 		},
 	};
-}
+};
 
 export default function Home({ content }) {
 	const cards = content.cardCollection.items;
