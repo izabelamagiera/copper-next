@@ -14,6 +14,10 @@
 	align-items: center;
 	border-radius: 6px;
 	z-index: 1;
+	background-image: url("/assets/arrows-banner.svg");
+	background-repeat: no-repeat;
+	background-position: calc(50% - 103px) 50%;
+	background-size: auto;
 
 	@include medium() {
 		flex-direction: column;
@@ -23,17 +27,22 @@
 		padding: 20px;
 	}
 
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 503px;
-		height: 149px;
-		left: calc(50% - 503px / 2 - 84.5px);
-		bottom: 0;
-		background-image: url("/assets/arrows-banner.svg");
-		z-index: 0;
+	@include small() {
+		background-size: cover;
+		background-position: right 50%;
 	}
+
+	// &::before {
+	// 	content: "";
+	// 	display: block;
+	// 	position: absolute;
+	// 	width: 503px;
+	// 	height: 149px;
+	// 	left: calc(50% - 503px / 2 - 84.5px);
+	// 	bottom: 0;
+	// 	background-image: url("/assets/arrows-banner.svg");
+	// 	z-index: 0;
+	// }
 
 	&__Btn {
 		position: relative;
