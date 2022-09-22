@@ -12,6 +12,7 @@ export const getStaticProps = async () => {
 		props: {
 			content: data.pageCollection.items[0],
 		},
+		revalidate: 1,
 	};
 };
 

@@ -23,6 +23,7 @@ export async function getStaticProps(context) {
 		props: {
 			content: data.pageCollection.items[0],
 		},
+		revalidate: 1,
 	};
 }
 
