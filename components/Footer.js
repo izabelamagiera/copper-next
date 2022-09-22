@@ -16,9 +16,7 @@ export default function Footer() {
 							</div>
 						</div>
 
-						<div
-							className={`${styles.FooterRow__ColumnTwo} ${styles.BorderTop}`}
-						>
+						<div className={styles.FooterRow__ColumnTwo}>
 							<div className={styles.FooterRow__Contact}>
 								<div>
 									<Link href="#">
