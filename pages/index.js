@@ -1,24 +1,24 @@
-import { useState, useEffect, useCallback } from 'react';
 import { getHomepage } from '../lib/api';
 import Head from 'next/head';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
 import HeroHeader from '../components/HeroHeader';
 import styles from '../styles/Main.module.scss';
+import { useState, useEffect } from 'react';
 
 export const getStaticProps = async () => {
 	const data = await getHomepage();
 
-	// const res = await fetch(
-	// 	`https://geolocation-db.com/json/e5e47150-bc2c-11ed-9b49-492949f4ff3d`
-	// );
-	// const location = await res.json();
-	// console.log(location);
+	const res = await fetch(
+		`https://geolocation-db.com/json/e5e47150-bc2c-11ed-9b49-492949f4ff3d`
+	);
+	const location = await res.json();
+	console.log(location);
 
 	return {
 		props: {
 			content: data.pageCollection.items[0],
-			// location: location.country_code,
+			location: location.country_code,
 		},
 		revalidate: 1,
 	};
@@ -26,21 +26,20 @@ export const getStaticProps = async () => {
 
 export default function Home({ content, location }) {
 	const cards = content.cardCollection.items;
+	const [isLocation, setLocation] = useState(location);
 
-	const url = 'http://ip-api.com/json/';
-	const [isLocation, setLocation] = useState('');
+	// const getLocation = () => {
+	// 	fetch(
+	// 		'https://geolocation-db.com/json/e5e47150-bc2c-11ed-9b49-492949f4ff3d'
+	// 	)
+	// 		.then((res) => res.json())
+	// 		.then((data) => setLocation(data));
+	// };
 
-	const fetchIP = useCallback(async () => {
-		const response = await fetch(url);
-		const json = await response.json();
-		const { query, countryCode } = json;
-		console.log(countryCode);
-		setLocation(countryCode);
-	}, [url]);
+	// useEffect(() => {
 
-	useEffect(() => {
-		fetchIP();
-	}, [fetchIP]);
+	// 	setLocation(location);
+	// }, [location]);
 
 	return (
 		<div className={styles.container}>
